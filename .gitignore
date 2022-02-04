@@ -1,0 +1,5 @@
+# no se sube cache generado
+__pycache__
+
+# no se sube entorno virtual
+env/
