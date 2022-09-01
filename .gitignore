@@ -3,3 +3,8 @@ __pycache__
 
 # no se sube entorno virtual
 env/
+
+# no se sube elementos estaticos
+img
+
+video
