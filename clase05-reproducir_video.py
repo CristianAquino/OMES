@@ -1,14 +1,14 @@
 import cv2
+from setting import get
 
-video = cv2.VideoCapture('video\VideoPrueba.avi')
+video = cv2.VideoCapture(get('video1'))
 
-while (video.isOpened()):#lee la imagen a cada momento
-    ret,imagen = video.read()
+while True:  # lee la imagen a cada momento
+    ret, imagen = video.read()
     if ret == True:
-        cv2.imshow('Video',imagen)
-        if cv2.waitKey(500) & 0xFF == ord('x'):#0xff si se trabaja en maquina de 65 bits
-            break                           #ord tecla que detiene el proceso
-        else:#para que cierre la ventana del video
-            break
-video.release()#cerrar la captura
+        cv2.imshow('Video', imagen)
+        # 0xff si se trabaja en maquina de 65 bits
+        if cv2.waitKey(1) & 0xFF == ord('x'):
+            break  # ord tecla que detiene el proceso
+video.release()  # cerrar la captura
 cv2.destroyAllWindows()
